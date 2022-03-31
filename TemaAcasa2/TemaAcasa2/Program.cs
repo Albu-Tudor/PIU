@@ -11,7 +11,8 @@ namespace TemaAcasa2
         static void Main(string[] args)
         {
             if (args.Length == 0)
-                Console.Write("Linia de comanda nu contine argumente");
+                Console.Write("Linia de comanda nu " +
+                    "contine argumente");
             else
             {
                 int first_letter_int;
@@ -35,7 +36,7 @@ namespace TemaAcasa2
                         vector[row][nr_elementsOnRow[row]] = param;
                         nr_elementsOnRow[row] = nr_elementsOnRow[row] + 1;
                     }
-                    else
+                    else if ((97 <= first_letter_int) && (first_letter_int <= 122))
                     {
                         row = first_letter_int - 97;
                         vector[row][nr_elementsOnRow[row]] = param;
